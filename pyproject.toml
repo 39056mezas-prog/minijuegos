@@ -1,0 +1,11 @@
+[project]
+name = "membership-store"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "psycopg[binary]>=3.2,<4",  # Postgres driver
+    "tzdata",                   # time zones for order timestamps; serverless images may lack them
+]
+
+[tool.vercel]
+entrypoint = "app:app"
